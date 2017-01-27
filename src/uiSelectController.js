@@ -49,7 +49,8 @@ uis.controller('uiSelectCtrl',
   // Use $injector to check for $animate and store a reference to it
   ctrl.$animate = (function () {
     try {
-      return $injector.get('$animate');
+      return null; // TODO: hot fix for angular 1.5
+      // return $injector.get('$animate');
     } catch (err) {
       // $animate does not exist
       return null;
